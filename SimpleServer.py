@@ -1,3 +1,4 @@
+import os
 from flask import Flask,render_template,jsonify,make_response,abort,request
 import peewee
 import json
@@ -6,6 +7,8 @@ import json
 app = Flask(__name__)
 
 # SQLiteDBの生成
+if not os.path.exists('/tmp'):
+    os.mkdir('/tmp')
 db= peewee.SqliteDatabase("/tmp/data.db")
 
 ################################################################################
