@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>IoTSample</title>
+</head>
+
+<body>
+	<h1>IoTデータ表示サンプル</h1>
+	<table border=1>
+		{% for d in data %}
+		<tr>
+			<td>{{d.now}}</td>
+			<td>{{d.val1}}</td>
+			<td>{{d.val2}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+
+</html>
