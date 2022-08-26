@@ -33,7 +33,7 @@ clientフォルダにてコマンドプロンプトを開く
 
 以下のコマンドを実行
 ```
-python client.py
+python testclient.py
 ``` 
 
 http://localhost:3000 を開いて、データが増えていることを確認する。
