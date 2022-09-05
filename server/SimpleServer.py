@@ -4,9 +4,7 @@ import peewee
 import json
 
 # SQLiteDBの生成
-if not os.path.exists('/tmp'):
-    os.mkdir('/tmp')
-db = peewee.SqliteDatabase("/tmp/data.db")
+db = peewee.SqliteDatabase("data.db")
 
 ################################################################################
 # データモデルクラス
@@ -30,7 +28,6 @@ app = Flask(__name__)
 def addData():
     # JSONを受け取る。
     data = request.json
-    print(data)
     # DBモデルに変換して保存。
     v = SampleDataModel(now=data["now"], val1=data["val1"], val2=data["val2"])
     v.save()

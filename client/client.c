@@ -30,9 +30,9 @@ void loop() {
     // JSONドキュメントを生成
     StaticJsonDocument<JSON_OBJECT_SIZE(4)> json;
     char txt[255];
-    json["hello"] = "world";
-    json["humid"] = h;
-    json["temp"]  = t;
+    json["now"] = now;
+    json["val1"] = h;
+    json["val2"]  = t;
     serializeJson(json,txt,sizeof(txt));
 
     // http送信
